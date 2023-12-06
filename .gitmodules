@@ -1,0 +1,3 @@
+[submodule "cdrrmo-client"]
+	path = cdrrmo-client
+	url = https://github.com/William-Jay-Inclino/cdrrmo-client.git

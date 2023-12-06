@@ -15,7 +15,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
     networks:
       - cdrrmo
-    # restart: always
+    restart: always
 
   cdrrmo-server:
     image: cdrrmo/cdrrmo-server:latest
@@ -32,7 +32,7 @@ services:
       - PORT=3000
     networks:
       - cdrrmo
-    # restart: always
+    restart: always
 
 
   cdrrmo-client:
@@ -46,7 +46,7 @@ services:
       NODE_ENV: production
     networks:
       - cdrrmo
-    # restart: always
+    restart: always
 
   nginx:
     image: nginx:1.25
@@ -59,7 +59,7 @@ services:
       - cdrrmo-server
     networks:
       - cdrrmo
-    # restart: always
+    restart: always
 
 networks:
   cdrrmo:

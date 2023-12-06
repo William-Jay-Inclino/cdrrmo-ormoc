@@ -1,3 +1,6 @@
 [submodule "cdrrmo-client"]
 	path = cdrrmo-client
 	url = https://github.com/William-Jay-Inclino/cdrrmo-client.git
+[submodule "cdrrmo-api"]
+	path = cdrrmo-api
+	url = https://github.com/William-Jay-Inclino/cdrrmo-api.git

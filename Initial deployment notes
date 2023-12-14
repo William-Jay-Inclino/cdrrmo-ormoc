@@ -1,0 +1,38 @@
+
+Initial Deployment
+
+Step 1. git clone git@github.com:William-Jay-Inclino/cdrrmo-ormoc.git
+
+Step 2. cd cdrrmo-ormoc
+
+Step 3. git submodule update --init --recursive
+- This command initializes the submodules and fetches the content for each submodule.
+
+
+
+Note: If github requires password use
+
+un: William-Jay-Inclino
+pw: <token> 
+
+my token expire 30d: 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 
+
+
+to regenerate token go to 
+
+1. github and click on your profile picture located in the top right corner 
+2. go to Settings
+3. Developer Settings
+4. Personal Access tokens 
+5. Tokens(classic)
+6. Generate new token
+
+
+
+Step 4. cd cdrrmo-api
+Step 5. git checkout <tag-version>
+* to find the latest tag version go to: https://github.com/William-Jay-Inclino/cdrrmo-api/tags
+Step5. cd .. and cd cdrrmo-client
+step6. git checkout <tag-version>
+* to find the lastest tag version go to https://github.com/William-Jay-Inclino/cdrrmo-client/tags
+step 7. cd ..

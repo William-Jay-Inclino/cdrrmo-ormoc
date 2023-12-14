@@ -30,9 +30,9 @@ to regenerate token go to
 
 
 Step 4. cd cdrrmo-api
-Step 5. git checkout <tag-version>
+Step 5. git checkout <release-branch>
 * to find the latest tag version go to: https://github.com/William-Jay-Inclino/cdrrmo-api/tags
 Step5. cd .. and cd cdrrmo-client
-step6. git checkout <tag-version>
+step6. git checkout <release-branch>
 * to find the lastest tag version go to https://github.com/William-Jay-Inclino/cdrrmo-client/tags
 step 7. cd ..

@@ -1,5 +1,6 @@
+===== This process is to setup codebase and has the ability to choose which release branch version =====
 
-Initial Deployment
+Note: In order to proceed install first node, npm, and git.
 
 Step 1. git clone git@github.com:William-Jay-Inclino/cdrrmo-ormoc.git
 
@@ -30,9 +31,11 @@ to regenerate token go to
 
 
 Step 4. cd cdrrmo-api
-Step 5. git checkout <tag-version>
-* to find the latest tag version go to: https://github.com/William-Jay-Inclino/cdrrmo-api/tags
+Step 5. git checkout <release-branch>
 Step5. cd .. and cd cdrrmo-client
-step6. git checkout <tag-version>
-* to find the lastest tag version go to https://github.com/William-Jay-Inclino/cdrrmo-client/tags
+step6. git checkout <release-branch>
 step 7. cd ..
+
+
+
+Next follow readme.txt

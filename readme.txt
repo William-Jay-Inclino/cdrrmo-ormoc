@@ -55,6 +55,7 @@ Installation Guide (Initial setup):
 
 1. Install Docker. https://docs.docker.com/get-docker/
 2. Install Docker Compose. https://docs.docker.com/compose/install/
+3. Go to directory cdrrmo-client/.env.production and use server ip address
 
 Running the Application: 
 

@@ -1,0 +1,42 @@
+How to setup auto back up every day 2:00 am
+
+
+STEP 1. Open the crontab editor with the command:
+
+crontab -e
+
+
+
+STEP 2. Add a new line to schedule your backup script. For example, to run the backup script every day at 2:00 AM, you can add the following line:
+
+0 2 * * * /path/to/your/backup_script.sh
+
+
+
+Make sure to replace /path/to/your/backup_script.sh with the actual path to your backup script.
+The format for the cron job is as follows:
+
+minute hour day month day_of_week command
+
+In the example above:
+
+0 for the minute field means the script will run at the beginning of the hour.
+2 for the hour field means the script will run at 2:00 AM.
+* for the day, month, and day_of_week fields means every day.
+
+
+
+STEP 3. Save the file and exit the editor.
+This cron job will execute your backup script every day at the specified time. Adjust the timing according to your preferences.
+
+
+
+Note: If you want to disable auto backup just comment the line of code using #
+run command: crontab -e
+
+
+
+
+for testing you can set auto back up for every minute to check if it's working. Don't forget to comment it if you are done testing: 
+
+* * * * * /path/to/your/backup_script.sh

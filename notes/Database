@@ -1,0 +1,11 @@
+to apply database back up run these commands in terminal:
+
+STEP 1: go to directory /scripts
+STEP 2: run command: ./drop_create_db.sh
+STEP 3: run command: ./restore_data.sh <path/to/backup/backup.dump>
+
+
+Note: In the directory structure we can run step 3: ./restore_data.sh ../backup/<backup.dump>
+* replace <backup.dump> with the backup file
+
+

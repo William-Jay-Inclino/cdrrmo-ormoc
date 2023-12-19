@@ -89,6 +89,9 @@ a003e94cadf5   cdrrmo/cdrrmo-client:latest   "docker-entrypoint.s…"   39 minut
 
 8. Login: Enter username and password you provided during step 6
 
+9. Modify backup.sh located in /scripts/backup.sh -> update path using the path of the host machine
+10. For auto back up read /notes/set auto back up of db
+
 
 === FOR DEVELOPMENT ===
 Same procedure for deploying to production

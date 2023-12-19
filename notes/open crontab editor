@@ -1,0 +1,5 @@
+crontab is for scheduling backups
+
+to open crontab editor use command
+
+crontab -e

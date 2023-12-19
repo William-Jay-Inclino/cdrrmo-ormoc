@@ -1,0 +1,5 @@
+
+
+to apply permissions for files to run like files end with .sh 
+
+ex: chmod +x backup_uploads.sh

@@ -1,0 +1,5 @@
+command to save and exit: 
+
+ctrl + o
+enter
+ctrl + x

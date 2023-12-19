@@ -26,11 +26,23 @@ fi
 # cdrrmo-server container name in your Docker Compose
 CDRRMO_SERVER_CONTAINER="cdrrmo-ormoc-cdrrmo-server-1"
 
+# Print the content of /usr/src/app inside the container for debugging
+echo "Contents of /usr/src/app inside the container:"
+docker exec $CDRRMO_SERVER_CONTAINER ls /usr/src/app
+
 # Copy the uploads folder from the container to the host's "uploads" directory
 docker cp $CDRRMO_SERVER_CONTAINER:/usr/src/app/uploads "$BACKUP_DIR/uploads/uploads_$TIMESTAMP"
 
+# Print the contents of the backup directory for debugging
+echo "Contents of $BACKUP_DIR/uploads:"
+ls "$BACKUP_DIR/uploads"
+
 # Remove old uploads backups from "uploads" directory inside "backup-latest"
 find "$BACKUP_LATEST_DIR/uploads" -type d -not -name "uploads_$TIMESTAMP" -exec rm -r {} \;
+
+# Print the contents of "backup-latest/uploads" directory for debugging
+echo "Contents of $BACKUP_LATEST_DIR/uploads:"
+ls "$BACKUP_LATEST_DIR/uploads"
 
 # Copy the latest uploads backup to the "uploads" directory within "backup-latest"
 cp -r "$BACKUP_DIR/uploads/uploads_$TIMESTAMP" "$BACKUP_LATEST_DIR/uploads/"

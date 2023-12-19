@@ -1,0 +1,60 @@
+Remote access on Linux Ubuntu can be achieved using various methods, and the choice depends on your specific needs and preferences. Here are two common methods: SSH (Secure Shell) and VNC (Virtual Network Computing).
+
+METHOD 1. SSH (Secure Shell):
+SSH is a secure protocol for accessing a remote server. It provides a command-line interface and is widely used for remote administration.
+
+Steps:
+
+1. Install SSH Server:
+   Ensure that the SSH server is installed on your Ubuntu machine. If it's not installed, you can install it using the following command:
+
+sudo apt update
+sudo apt install openssh-server
+
+2. Enable and Start SSH Service:
+   The SSH service should start automatically after installation. If not, you can start it manually using:
+
+sudo service ssh start
+
+3. Find your IP Address:
+   Identify the IP address of your Ubuntu machine. You can use the following command:
+
+hostname -I
+
+4. Connect from Remote Machine:
+   From a remote machine, open a terminal and use the following command to connect:
+
+ssh username@ubuntu_ip_address
+
+\*Replace username with your Ubuntu username and ubuntu_ip_address with the IP address of your Ubuntu machine.
+
+5. Authenticate:
+   Enter your Ubuntu user password when prompted.
+
+METHOD 2. VNC (Virtual Network Computing):
+
+VNC allows you to access the graphical desktop environment of your Ubuntu machine remotely.
+
+Steps:
+
+1. Install VNC Server:
+   Install a VNC server on your Ubuntu machine. One popular option is tightvncserver:
+
+sudo apt update
+sudo apt install tightvncserver
+
+2. Start VNC Server:
+   Start the VNC server using the following command:
+
+tightvncserver
+
+3. Configure VNC Password:
+   Set up a VNC password when prompted.
+
+4. Find your IP Address:
+   Identify the IP address of your Ubuntu machine.
+
+5. Connect from VNC Client:
+   Use a VNC client on your local machine to connect to the VNC server using the Ubuntu IP address and port (default is :1).
+
+Note: Keep in mind that for both SSH and VNC, you may need to configure your firewall to allow the necessary traffic. Adjust the security settings according to your needs and best practices.

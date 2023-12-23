@@ -1,0 +1,24 @@
+For running live environment
+
+docker-compose -f docker-compose.yml up -d
+
+docker-compose -f docker-compose.yml up --build --force-recreate
+
+
+for running test environment
+
+docker-compose -f docker-compose.test.yml up -d
+
+docker-compose -f docker-compose.test.yml up --build --force-recreate
+
+
+For running both simultaneously which should be done in live server 
+
+docker-compose -f docker-compose.yml -f docker-compose.test.yml up -d
+
+
+
+for debugging: 
+
+docker logs cdrrmo-ormoc-postgres-1
+docker inspect cdrrmo-ormoc-postgres-1

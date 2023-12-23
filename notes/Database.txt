@@ -1,0 +1,43 @@
+to apply database back up run these commands in terminal:
+
+STEP 1: go to directory /scripts
+STEP 2: run command: ./drop_create_db.sh
+STEP 3: run command: ./restore_data.sh <path/to/backup/backup.dump>
+
+
+Note: In the directory structure we can run step 3: ./restore_data.sh ../backup/db/<backup.dump>
+* replace <backup.dump> with the backup file
+
+
+when using postgres inside docker container 
+
+docker exec -it cdrrmo-ormoc-postgres-1 /bin/sh 
+psql -U jay -d cdrrmodb
+\dt 
+SELECT * FROM "user"
+
+
+
+Note: add double quotes when defining a table
+
+
+warning: this will remove the db. Proceed with caution
+to remove all volumes and have clean state on the db 
+
+1.Stop and Remove All Containers:
+Before removing the volumes, stop and remove all Docker containers to ensure that there are no active connections to the volumes.
+
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+
+
+2. After stopping and removing all containers, you can remove the unwanted volumes using the docker volume rm command.
+
+docker volume rm cdrrmo-ormoc_postgres-data
+docker volume rm cdrrmo-ormoc_postgres-test-data
+
+
+3. Verify Volume Removal:
+Confirm that the volumes are no longer present in the volume directory:
+
+sudo ls -l /var/lib/docker/volumes/
